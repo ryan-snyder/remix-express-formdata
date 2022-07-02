@@ -9,7 +9,8 @@ const BUILD_DIR = path.join(process.cwd(), "build");
 const app = express();
 
 app.use(compression());
-
+//these two lines are the issue. comment them out and it works
+// leave them in and it doesn't
 app.use(express.urlencoded({
   extended: true
 }))
